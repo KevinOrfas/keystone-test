@@ -3,27 +3,26 @@
     <div class="panel-heading">Tickets</div>
     <div class="panel-body">
       <p>These are list of tickets in the system.</p>
-    </div>
+    
     <table class="table table-striped">
       {{#each data.tickets}}
       <tr>
         <td>
           <div class="col-md-1">
-            <span class="label label-info">{{status}}</span>
+            <span class="label label-info pull-right">{{status}}</span>
           </div>
-          <a href="{{this.url}}"><b>{{capitalize title}}</b> </a>
+          <a href="{{url}}"><b>{{capitalize title}}</b> </a>
           <ul class="ticket-meta">
-            <li>&nbsp;</li>
             <li><small>Status</small> <a href="" rel="tag">{{status}}</a></li>
             <li><small>Priority</small> <a href="" rel="tag">{{priority}}</a></li>
             <li><small>Category</small> <a href="" rel="tag">{{category}}</a></li>
             <li><small>Last Updated</small> <abbr title="" class="last-updated">{{date createdAt}}</abbr></li>
-            
           </ul>
         </td>
       </tr>
       {{/each}}
     </table>
+    </div>
     <div class="panel-footer"></div>
   </div>
 </div>

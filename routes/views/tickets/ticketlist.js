@@ -11,6 +11,11 @@ exports = module.exports = (req, res) => {
   // Load all tickets
   view.on('init', (next) => {
     const q = keystone.list('Ticket').model.find();
+    // const q = keystone.list('Ticket').paginate({
+    //   page: req.query.page || 1,
+    //   perPage: 5,
+    //   maxPages: 5
+    // });
     q.exec((err, results) => {
       locals.data.tickets = results;
       next(err);

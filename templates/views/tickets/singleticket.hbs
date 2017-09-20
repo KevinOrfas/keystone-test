@@ -1,1 +1,21 @@
-hello
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Ticket details - {{data.ticket.title}}</div>
+    <div class="panel-body">
+      <span class="label label-info pull-right">
+        {{data.ticket.status}}
+      </span>
+      <p>{{data.ticket.description}}</p>
+
+      <a href='{{url}}'><b>{{capitalize data.ticket.title}}</b><a>
+    <ul class="ticket-meta">
+      <li><small>Status</small> <a href="" rel="tag">{{data.ticket.status}}</a></li>
+      <li><small>Priority</small> <a href="" rel="tag">{{data.ticket.priority}}</a></li>
+      <li><small>Category</small> <a href="" rel="tag">{{data.ticket.category}}</a></li>
+      <li><small>Last Updated</small> <abbr title="" class="last-updated">{{date data.ticket.createdAt}}</abbr></li>
+
+      </ul>
+    </div>
+    <div class="panel-footer"></div>
+  </div>
+</div>
